@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <title>Digital policy capabilities</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    <!-- Canvasjs -->
+    <script type="text/javascript" src="../canvasjs/canvasjs.min.js"></script>
+
+    <script>
+    
+		$(function() {
+			var chart = new CanvasJS.Chart("chartContainer",
+			{
+			  title:{
+			  text: ""
+			  },
+		      legend: {
+				   horizontalAlign: "center", // "center" , "right"
+				   verticalAlign: "top",  // "top" , "bottom"
+				   fontSize: 15
+		  	  },
+			   data: [
+				{        
+					type: "spline",
+					showInLegend: true,
+					name: "DEFRA",
+					legendText: "DEFRA",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 1 },
+						{ x: new Date(2014, 01, 1), y: 1.5 },
+						{ x: new Date(2014, 02, 1), y: 2 },
+						{ x: new Date(2014, 03, 1), y: 2.7 },
+					]
+				  },
+					{        
+					type: "spline",
+					showInLegend: true,
+					name: "HMO",
+					legendText: "HMO",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 2 },
+						{ x: new Date(2014, 01, 1), y: 2.25 },
+						{ x: new Date(2014, 02, 1), y: 1.75 },
+						{ x: new Date(2014, 03, 1), y: 2 },
+					]
+				  },
+				  				{        
+					type: "spline",
+					showInLegend: true,
+					name: "HMRC",
+					legendText: "HMRC",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 1 },
+						{ x: new Date(2014, 01, 1), y: 1.5 },
+						{ x: new Date(2014, 02, 1), y: 2 },
+						{ x: new Date(2014, 03, 1), y: 4 },
+					]
+				  },
+				  				{        
+					type: "spline",
+					showInLegend: true,
+					name: "MOD",
+					legendText: "MOD",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 0.3 },
+						{ x: new Date(2014, 01, 1), y: 1 },
+						{ x: new Date(2014, 02, 1), y: 1.2 },
+						{ x: new Date(2014, 03, 1), y: 0.7 },
+					]
+				  }
+		
+			  ]
+			});
+
+			chart.render();
+		});
+		    
+    </script>
+
+  </head>
+  <body>
+  
+  <div class="container">
+  
+	  <div class="page-header">
+		<h2>Digital policy capabilities</h2>
+	  </div>
+  
+	  <div><h3>Definition</h3>What this means, who to talk to about it, etc</h3></div>
+      <div><h3>Methodology</h3>How this is assessed, etc</h3></div>
+
+      <div><h3>Overall departmental status</h3></div>
+  
+	  <div id="chart"><div id="chartContainer" style="height: 300px; width: 100%;"></canvas></div>
+       
+       <div><h3>Breakdown</h3></div>
+       
+       Click on a organisation or capability area for further information.<p/>
+       Dates in brackets indicate latest update for that data. Background colour of department indicates overall RAG status.
+              
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="success"><a href="defra_policy.html">DEFRA</a></td>
+            <td class="danger">1 (16/02/14)</td>
+            <td class="warning">2 (10/02/14)</td>
+            <td class="success">3 (01/02/14)</td>
+          </tr>
+          <tr>
+            <td class="warning">HMO</td>
+            <td class="danger">0 (01/02/14)</td>
+            <td class="danger">1 (19/01/14)</td>
+            <td class="warning">2 (04/02/14)</td>
+          </tr>
+          <tr>
+            <td class="warning">HMRC</td>
+            <td class="success">3 (05/01/14)</td>
+            <td class="success">3 (09/03/14)</td>
+            <td class="warning">2 (16/03/14)</td>
+          </tr>
+          <tr>
+            <td class="danger">MOD</td>
+            <td class="danger">0 (14/02/14)</td>
+            <td class="danger">0 (17/02/14)</td>
+            <td class="danger">1 (12/02/14)</td>
+          </tr>
+
+        </tbody>
+      </table>
+  
+  </div>  
+  </div>
+  
+  </body>
+</html>
+  

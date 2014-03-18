@@ -1,0 +1,255 @@
+<html>
+  <head>
+    <title>Digital capabilities of the Environment Agency</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    <!-- Canvasjs -->
+    <script type="text/javascript" src="../canvasjs/canvasjs.min.js"></script>
+
+    <script>
+    
+		$(function() {
+			var chart = new CanvasJS.Chart("chartContainer",
+			{
+			  title:{
+			  text: ""
+			  },
+		      legend: {
+				   horizontalAlign: "center", // "center" , "right"
+				   verticalAlign: "top",  // "top" , "bottom"
+				   fontSize: 15
+		  	  },
+			   data: [
+				{        
+					type: "spline",
+					showInLegend: true,
+					name: "Policy",
+					legendText: "Policy",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 1 },
+						{ x: new Date(2014, 01, 1), y: 1.5 },
+						{ x: new Date(2014, 02, 1), y: 2 },
+						{ x: new Date(2014, 03, 1), y: 2.7 },
+					]
+				  },
+					{        
+					type: "spline",
+					showInLegend: true,
+					name: "Social Media",
+					legendText: "Social Media",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 2 },
+						{ x: new Date(2014, 01, 1), y: 2.25 },
+						{ x: new Date(2014, 02, 1), y: 1.75 },
+						{ x: new Date(2014, 03, 1), y: 2 },
+					]
+				  },
+				  {        
+					type: "spline",
+					showInLegend: true,
+					name: "Consultations",
+					legendText: "Consultations",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 1 },
+						{ x: new Date(2014, 01, 1), y: 1.5 },
+						{ x: new Date(2014, 02, 1), y: 2 },
+						{ x: new Date(2014, 03, 1), y: 4 },
+					]
+				  },
+				  				{        
+					type: "spline",
+					showInLegend: true,
+					name: "GSD Exemplars",
+					legendText: "GSD Exemplars",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 0.3 },
+						{ x: new Date(2014, 01, 1), y: 1 },
+						{ x: new Date(2014, 02, 1), y: 1.2 },
+						{ x: new Date(2014, 03, 1), y: 0.7 },
+					]
+				  },
+						  {        
+					type: "spline",
+					showInLegend: true,
+					name: "Digital Delivery",
+					legendText: "Digital Delivery",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 0.7 },
+						{ x: new Date(2014, 01, 1), y: 0.9 },
+						{ x: new Date(2014, 02, 1), y: 1.6 },
+						{ x: new Date(2014, 03, 1), y: 3.8 },
+					]
+				  },
+				  				{        
+					type: "spline",
+					showInLegend: true,
+					name: "IT Modernisation",
+					legendText: "IT Modernisation",
+					axisX: {
+						valueFormatString: "MMM",
+						interval: 1,
+						intervalType: "month"
+					},
+					axisY:{
+					   minimum: 5
+					},
+					dataPoints: [
+						{ x: new Date(2014, 00, 1), y: 1.9 },
+						{ x: new Date(2014, 01, 1), y: 1.9 },
+						{ x: new Date(2014, 02, 1), y: 2.9 },
+						{ x: new Date(2014, 03, 1), y: 4.6 },
+					]
+				  }
+
+			  ]
+			});
+
+			chart.render();
+		});
+    
+    </script>
+
+  </head>
+  <body>
+  
+  <div class="container">
+  
+	  <div class="page-header">
+		<h2>Digital capabilities of the Environment Agency</h2>
+	  </div>
+  
+	  <div><h3>Update</h3>Latest update on improving digital capabilities at the EA, links to blog, who to contact, etc</h3></div>
+
+      <div><h3>Overall organisation status</h3></div>
+  
+	  <div id="chart"><div id="chartContainer" style="height: 300px; width: 100%;"></canvas></div>
+       
+       <div><h3>Breakdown</h3></div>
+       
+       Click on a organisation or capability area for further information.<p/>
+       Dates in brackets indicate latest update for that data. Background colour of department indicates overall RAG status.
+              
+       <table class="table">
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+            <th>Fourth</th>
+            <th>Fifth</th>
+            <th>Sixth</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="success"><a href="defra_policy_ea.html">Policy</a></td>
+            <td class="danger">1 (16/02/14)</td>
+            <td class="warning">2 (10/02/14)</td>
+            <td class="success">3 (01/02/14)</td>
+            <td class="success">4 (30/02/14)</td>
+            <td class="warning">2 (07/03/14)</td>
+            <td class="success">4 (09/01/14)</td>
+          </tr>
+          <tr>
+            <td class="warning">Social Media</td>
+            <td class="danger">0 (01/02/14)</td>
+            <td class="danger">1 (19/01/14)</td>
+            <td class="warning">2 (04/02/14)</td>
+            <td class="danger">1 (16/02/14)</td>
+            <td class="danger">1 (02/03/14)</td>
+            <td class="warning">2 (16/01/14)</td>
+          </tr>
+          <tr>
+            <td class="warning">Consultations</td>
+            <td class="success">3 (05/01/14)</td>
+            <td class="success">3 (09/03/14)</td>
+            <td class="warning">2 (16/03/14)</td>
+            <td class="danger">1 (19/01/14)</td>
+            <td class="success">3 (07/03/14)</td>
+            <td class="success">4 (09/01/14)</td>
+          </tr>
+          <tr>
+            <td class="danger">GDS Exemplars</td>
+            <td class="danger">0 (14/02/14)</td>
+            <td class="danger">0 (17/02/14)</td>
+            <td class="danger">1 (12/02/14)</td>
+            <td class="danger">0 (16/03/14)</td>
+            <td class="danger">1 (05/02/14)</td>
+            <td class="warning">2 (07/01/14)</td>
+          </tr>
+          <tr>
+            <td class="warning">Digital Delivery</td>
+            <td class="success">3 (05/01/14)</td>
+            <td class="success">3 (09/03/14)</td>
+            <td class="warning">2 (16/03/14)</td>
+            <td class="danger">1 (19/01/14)</td>
+            <td class="success">3 (07/03/14)</td>
+            <td class="success">4 (09/01/14)</td>
+          </tr>
+          <tr>
+            <td class="danger">IT Modernisation</td>
+            <td class="danger">0 (14/02/14)</td>
+            <td class="danger">0 (17/02/14)</td>
+            <td class="danger">1 (12/02/14)</td>
+            <td class="danger">0 (16/03/14)</td>
+            <td class="danger">1 (05/02/14)</td>
+            <td class="warning">2 (07/01/14)</td>
+          </tr>
+
+        </tbody>
+      </table>
+  
+  </div>  
+  </div>
+  
+  </body>
+</html>
+  
